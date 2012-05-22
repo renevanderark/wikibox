@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/util.js"></script>
+		<script type="text/javascript" src="js/wikisearch.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$("#box").wikiSearch({
+					callback: function(lemma, lang) { 
+						location.href = "http://" + lang + ".wikipedia.org/wiki/" + lemma; 
+					},
+					label: "Search wiki"
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="box" style="width: 300px; border: 1px solid"></div>
+	</body>
+</html>
