@@ -9,7 +9,7 @@ $.fn.wikiSearch = function(opts) {
 	var resultList = $("<ul>");
 	var listResults = function(results) {
 		resultList.html("");
-		if(results.length > 1 && results[1].length > 0) {
+		if(results["1"] && results["1"].length > 0) {
 			$.each(results[1], function(i, hit) {
 				var item = $("<li>").append($("<a>").append(hit).click(function() { onLink(hit, lang); }).css({color: "blue", cursor: "pointer"}) );
 				resultList.append(item);
